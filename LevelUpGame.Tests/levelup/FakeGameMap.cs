@@ -1,11 +1,11 @@
 using NUnit.Framework;
-using levelup.Character;
+using levelup;
 
 namespace levelup
 {
-    public class FakeCharacter : Character
-    {
-    
+    public class FakeGameMap : GameMap
+    { 
+        int[,] map = new int[10,10];
      public enterMap(GameMap map)
      {
         
