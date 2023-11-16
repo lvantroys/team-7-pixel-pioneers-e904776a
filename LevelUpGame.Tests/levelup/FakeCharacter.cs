@@ -1,24 +1,11 @@
 using NUnit.Framework;
-using levelup;
+using levelup.Character;
 
 namespace levelup
 {
-    [TestFixture]
-    public class CharacterTest
+    public class FakeCharacter : Character
     {
-        private  CharacterClass? testObj;
+        string = 
 
-        [Setup]
-        public void SetUp()
-        {
-            testObj = new GameCharacter();
-        }
-
-        [Test]
-        {
-            
-        }
-
-
-    }
+    } 
 }
