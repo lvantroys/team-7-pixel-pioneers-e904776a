@@ -9,6 +9,9 @@ namespace levelup
         public Character(){
             this.name = DEFAULT_CHARACTER_NAME;
         }
+        public Character(string name){
+            this.name = name;
+        }
         public string getName(){
             return name;
 
