@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using levelup;
 
+
 namespace levelup
 {
     [TestFixture]
@@ -18,7 +19,7 @@ namespace levelup
         public void IsCharacterNameInitialized()
         {
 #pragma warning disable CS8602 // Rethrow to preserve stack details
-            Assert.IsNotNull(testObj.GetName());
+            Assert.IsNotNull(testObj.getName());
         }
     }
 }
