@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using levelup;
 using System.Diagnostics.Contracts;
+using System.IO.Pipes;
 
 
 namespace levelup
@@ -31,6 +32,14 @@ namespace levelup
         public void GetPositionsTest()
         {
          Assert.IsTrue(testObjGameMap.GetPositions().Length.Equals(100));
+        }
+
+        [Test]
+        public void CalculatePositionTest()
+        {
+            Position calculatedPosition = testObjGameMap.calculatePosition(new Position (2,3), GameController.DIRECTION.NORTH);
+            Position expectedCalculatedPosition = new Position(0,0);
+            Assert.IsTrue(calculatedPosition.getCoordinates().Equals(expectedCalculatedPosition.getCoordinates()));
         }
     }
 }

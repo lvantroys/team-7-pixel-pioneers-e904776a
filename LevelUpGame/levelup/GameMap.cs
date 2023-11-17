@@ -15,5 +15,10 @@ namespace levelup
         {
             return positions;
         }
+        public Position calculatePosition(Position startingPosition, GameController.DIRECTION direction)
+        {
+            
+            return (new Position(0,0));
+        }
     }
 }
