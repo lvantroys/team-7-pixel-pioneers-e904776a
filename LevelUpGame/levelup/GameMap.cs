@@ -17,8 +17,20 @@ namespace levelup
         }
         public Position calculatePosition(Position startingPosition, GameController.DIRECTION direction)
         {
-            
-            return (new Position(0,0));
+            Position newPosition = new Position(1,1);
+            if(isPositionValid(newPosition.getCoordinates()) == true)
+            {
+                return newPosition;
+            }
+            else
+            {
+                return startingPosition;
+            }
+        }
+
+         public bool isPositionValid(Point positionCoordinates)
+        {        
+            return false;
         }
     }
 }
