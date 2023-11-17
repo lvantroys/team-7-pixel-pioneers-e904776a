@@ -5,6 +5,8 @@ namespace levelup
     public class GameMap 
     {
         public int numPositions = 100;
+
+        public int totalMoves = 0;
         public Position [,] positions;
 
         public GameMap()
@@ -18,6 +20,7 @@ namespace levelup
         public Position calculatePosition(Position startingPosition, GameController.DIRECTION direction)
         {
             Position newPosition = new Position(1,1);
+            totalMoves++;
             if(isPositionValid(newPosition.getCoordinates()) == true)
             {
                 return newPosition;
@@ -31,6 +34,11 @@ namespace levelup
          public bool isPositionValid(Point positionCoordinates)
         {        
             return false;
+        }
+
+        public int GetTotalPositions()
+        {        
+            return totalMoves;
         }
     }
 }

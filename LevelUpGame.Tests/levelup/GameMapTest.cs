@@ -48,5 +48,15 @@ namespace levelup
             Position positionToTest = new Position(0,0);
             Assert.IsFalse(testObjGameMap.isPositionValid(positionToTest.getCoordinates()));
         }
+
+        [Test]
+        public void GetTotalPositionsTest()
+        {
+            int totalPositionsPreMove = testObjGameMap.GetTotalPositions();
+            Position calculatedPosition = testObjGameMap.calculatePosition(new Position (2,3), GameController.DIRECTION.NORTH);
+            Position expectedCalculatedPosition = new Position(2,3);
+            int totalPositionsPostMove = testObjGameMap.GetTotalPositions();
+            Assert.IsTrue(totalPositionsPostMove == totalPositionsPreMove + 1);
+        }
     }
 }
