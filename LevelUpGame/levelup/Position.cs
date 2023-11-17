@@ -4,10 +4,16 @@ namespace levelup
 {
     public class Position
     {
-        
-        public Point PositionSet(int xPosition, int yPosition)
+        internal Point coordinates;
+       // private int yPosition;
+    
+
+        public Position(int xPosition, int yPosition)
         {
-            Point coordinates = new Point(xPosition, yPosition);
+            coordinates = new Point(xPosition,yPosition);
+        }
+
+        public Point getCoordinates(){
             return coordinates;
         }
     }

@@ -77,6 +77,12 @@ namespace levelup
             return -10;
         }
 
+    public void updateStatus(string name, Point pos, int count)
+    {
+        this.status.characterName = name;
+        this.status.currentPosition = pos;
+        this.status.moveCount = count;
+    }
 
     }
 }
